@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project_3: Fullstack</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin="" />
+  <!-- <link rel="stylesheet" type="text/css" href="./parcoords.css">
+        <script src="./parcoords.standalone.js"></script>  -->
+
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+  <script src="//d3js.org/d3.v4.0.0-alpha.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawSeriesChart);
+      </script>
+  <link href="https://fonts.googleapis.com/css?family=Graduate&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  
+  <style>
+    body, html {
+                  height: 100%;
+                  margin: 0;
+                }
+        </style>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  </script>
+</head>
+<!-- <header class = "header_main"> -->
+<!-- Top navigation -->
+<div class="topnav" id="home">
+  <!-- Left-aligned links (default) -->
+  <div class="topnav-left">
+      <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Navy Game Stats</button>
+            <!-- <i class="fa fa-caret-down"></i> -->
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#navygoals">Goals Analysis</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+          </div>
+        </div> 
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <!-- Centered link -->
+  <div class="topnav-centered">
+    <a href="#home" class="active">
+      <img src="images/main_logo.svg" width="65" height="65">
+      <img src="images/lacrosse-icon-5.jpg" width="50" height="50">
+      <img src="images/main_logo.svg" width="65" height="65">
+    </a>
+
+  </div>
+  <!-- Right-aligned links -->
+  <div class="topnav-right">
+    <a href="#search">Search</a>
+    <a href="#about">About</a>
+  </div>
+</div>
+
+<body>
+  <div class="container" id=jumbotron>
+    <div class="jumbotron jumbotron-fluid">
+      <h1 class="display-4" font>Woman's Navy Lacrosse Stats Unpackaged</h1>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <p class="text-white bg-dark">Improving Woman's Navy Lacrosse with Stats, Play-by-Play
+        <br></br>
+        <a class="btn btn-primary btn-lg" href="https://www.ncaa.com/sports/lacrosse-women/d1" role="button">Learn more
+          about NCAA Woman's Navy Lacrosse</a>
+      </p>
+      <!-- </header> -->
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="bg">
+    <div class="container">
+      <div class="zoom" id="about">
+        <p>Lacrosse began at the Naval Academy in 1908 when two former Johns Hopkins players, Frank Breyer and Bill
+          Hudgins, volunteered to help form a team.
+          On April 4, they played their first game, against their co-founders' alma mater, which they lost, 1–6. In
+          1911, George Finlayson took over as head coach and a year later
+          led Navy to its first undefeated season. The start of the First World War caused a cancellation of the 1917
+          season after just two games, but also marked the start of seven season undefeated streak.
+          From mid-season in 1916 to the final game of 1923, Navy won 45 consecutive games.</p>
+          <br></br>
+          <a href="#home" class="btn btn-primary btn-xs"
+          role="button">Back to the top</a>
+      </div>
+    </div>
+    <br></br>
+    <br></br>
+    <br></br>
+    <div class="container">
+        <div class="img-overlay-wrap" id=navygoals> 
+            <div class="path"></div>
+              <div class="legend"></div>
+              <div class="axis path"></div>
+                <div class="axis"></div>
+        </div>
+      <!-- <div class="section2" id="Howtoplay">
+          </div> -->
+        <a href="#home" class="btn btn-primary btn-xs"
+          role="button">Back to the top</a>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container">
+    
+  <div class="chart"></div>
+  </div> -->
+
+  <div class="footer" id="contact">
+    <p>Contact the authors through GitHub: Drew Adams, Joao Victor Bonini, Richa Desai, Melissa Philipps & Nadia Patel
+      2019 Northwestern Data Science Bootcamp</p>
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="https://github.com/jvbonini/Project-II" data-icon="octicon-cloud-download" data-size="large"
+      aria-label="Download ntkme/github-buttons on GitHub">Download the source code here</a>
+    <a href="#home" class="btn btn-primary btn-xs" role="button">Back to the top</a>
+    <p></a>
+  </div>
+  </div>
+
+</body>
+<script type="text/javascript" src="app3.js"></script>
+<!-- <script type="text/javascript" src="app4.js"></script> -->
+<!-- <script type="text/javascript" src="app.js"></script> -->
+
+
+
+</html>
