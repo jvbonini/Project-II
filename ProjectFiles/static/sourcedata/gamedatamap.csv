@@ -1,5 +1,5 @@
 key,opponent,place,location,navyScore,opponentScore,result,date
-0,Virginia,at,"38.0400823, -78.5199933",12,15,loss,"Saturday, February 9, 2019"
+0,Virginia,at,"38.0401499, -78.7",12,15,loss,"Saturday, February 9, 2019"
 1,Saint Joseph's,vs,"40.0024137, -75.2581161",12,11,win,"Sunday, February 17, 2019"
 2,Towson,vs,"39.3963558, -76.6501609",14,13,win,"Saturday, February 23, 2019"
 3,Villanova,at,"40.0369047, -75.3830509",14,16,loss,"Wednesday, February 27, 2019"
@@ -10,9 +10,9 @@ key,opponent,place,location,navyScore,opponentScore,result,date
 8,Bucknell,vs,"40.9631304, -76.9017217",17,4,win,"Saturday, March 23, 2019"
 9,Lehigh,at,"40.6253506, -75.4360666",23,6,win,"Wednesday, March 27, 2019"
 10,Holy Cross,vs,"42.2755407, -71.8777781",22,6,win,"Saturday, March 30, 2019"
-11,Loyola,at,"39.2848183, -76.6905261",6,16,loss,"Saturday, April 6, 2019"
+11,Loyola,at,"39.2848183, -76.9",6,16,loss,"Saturday, April 6, 2019"
 12,Georgetown,at,"38.89378, -77.154661",16,9,win,"Wednesday, April 10, 2019"
-13,Army West Point,vs,"41.3722571, -74.0810676",21,8,win,"Saturday, April 13, 2019"
+13,Army West Point,vs,"41.3722571, -74.3",21,8,win,"Saturday, April 13, 2019"
 14,American,vs,"38.89378, -77.154661",20,10,win,"Wednesday, April 17, 2019"
 15,Lafayette,vs,"40.6788652, -75.2716353",21,5,win,"Saturday, April 20, 2019"
 16,Boston University,at,"42.3142647, -71.1103669",13,12,win,"Thursday, April 25, 2019"
